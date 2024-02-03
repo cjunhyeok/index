@@ -11,13 +11,14 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "MEMBER", indexes = @Index(name = "idx_member_username", columnList = "username"))
 public class Member extends BaseEntity {
 
     @Id @GeneratedValue
     @Column(name = "member_id")
     private Long id;
 
-    @Column(unique = true)
+    @Column(name = "username")
     private String username; // 사용자 Id, 중복금지
     private String password; // 비밀번호
     private String nickname; // 닉네임, 중복금지
