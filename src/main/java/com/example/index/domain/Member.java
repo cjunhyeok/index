@@ -3,11 +3,9 @@ package com.example.index.domain;
 import com.example.index.BaseEntity;
 import com.example.index.domain.enums.RegionType;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+@Setter
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
